@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"yacli"
+	"github.com/wizact/yacli"
 )
 
 func main() {
@@ -15,8 +15,8 @@ func main() {
 	app.AddCommand(&FooCommand{})
 
 
-	type memberIdCtxKey string
-	ctx := context.WithValue(context.Background(), memberIdCtxKey("memberId"), "123")
+	type memberIDCtxKey string
+	ctx := context.WithValue(context.Background(), memberIDCtxKey("memberId"), "123")
 
 	app.Run(ctx)
 }
