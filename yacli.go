@@ -31,7 +31,6 @@ type Application struct {
 	Commands []Command
 }
 
-
 // Command interface with one or many flags.
 type Command interface {
 	Name() string
@@ -108,7 +107,7 @@ func (app *Application) findCommand(name string) (Command, error) {
 		}
 	}
 
-	return nil , &ArgError{argument: name}
+	return nil, &ArgError{argument: name}
 }
 
 // ArgError throws when the argument to cli does not satisfy the expectations

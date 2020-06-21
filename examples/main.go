@@ -14,7 +14,6 @@ func main() {
 
 	app.AddCommand(&FooCommand{})
 
-
 	type memberIDCtxKey string
 	ctx := context.WithValue(context.Background(), memberIDCtxKey("memberId"), "123")
 
